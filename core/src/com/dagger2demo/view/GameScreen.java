@@ -3,6 +3,7 @@ package com.dagger2demo.view;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.dagger2demo.controller.MainController;
 
 import javax.inject.Inject;
 
@@ -12,9 +13,11 @@ import javax.inject.Inject;
 public class GameScreen implements Screen {
     private SpriteBatch batch;
     private Texture     img;
+    private MainController mainController;
 
     @Inject
-    public GameScreen() {
+    public GameScreen(MainController mainController) {
+        this.mainController = mainController;
     }
 
     @Override

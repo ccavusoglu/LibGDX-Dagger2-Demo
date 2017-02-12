@@ -50,7 +50,6 @@ project(":desktop") {
 
 project(":android") {
     apply plugin: "android"
-    apply plugin: 'com.neenbedankt.android-apt'
 
     configurations { natives }
 
